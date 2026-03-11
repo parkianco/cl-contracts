@@ -33,40 +33,35 @@
    - integer (converted to minimal byte representation)
    - string (converted to bytes)
    - list (encoded as RLP list)"
-  (typecase item
-    ;; Empty byte vector
-    ((satisfies (lambda (x) (and (typep x '(vector (unsigned-byte 8)))
-                                  (zerop (length x)))))
-     (vector #x80))
-
-    ;; Single byte 0-127
-    ((satisfies (lambda (x) (and (typep x '(vector (unsigned-byte 8)))
-                                  (= (length x) 1)
-                                  (< (aref x 0) 128))))
-     item)
-
-    ;; Byte vector
-    ((vector (unsigned-byte 8))
+  (cond
+    ;; Byte vector cases
+    ((typep item '(vector (unsigned-byte 8)))
      (let ((len (length item)))
-       (if (and (= len 1) (< (aref item 0) 128))
-           item
-           (concat-bytes (rlp-encode-length len 128) item))))
+       (cond
+         ;; Empty byte vector
+         ((zerop len)
+          (make-array 1 :element-type '(unsigned-byte 8) :initial-element #x80))
+         ;; Single byte 0-127
+         ((and (= len 1) (< (aref item 0) 128))
+          item)
+         ;; General byte vector
+         (t (concat-bytes (rlp-encode-length len 128) item)))))
 
     ;; Integer
-    (integer
+    ((integerp item)
      (if (zerop item)
-         (vector #x80)
+         (make-array 1 :element-type '(unsigned-byte 8) :initial-element #x80)
          (let ((bytes (loop for n = item then (ash n -8)
                             while (> n 0)
                             collect (logand n #xff))))
            (rlp-encode (coerce (reverse bytes) '(vector (unsigned-byte 8)))))))
 
     ;; String
-    (string
+    ((stringp item)
      (rlp-encode (map '(vector (unsigned-byte 8)) #'char-code item)))
 
     ;; List
-    (list
+    ((listp item)
      (let* ((encoded-items (mapcar #'rlp-encode item))
             (payload (apply #'concat-bytes encoded-items))
             (len (length payload)))
