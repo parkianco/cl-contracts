@@ -1,0 +1,33 @@
+cl-contracts - Smart Contract Lifecycle Management for Common Lisp
+===================================================================
+
+This software was originally developed as part of the CLPIC project
+(Common Lisp P2P Intellectual Property Chain) and has been extracted
+as a standalone library.
+
+Original source: https://github.com/clpic/clpic
+Extracted modules:
+  - src/contracts/deployment/
+  - src/contracts/storage/
+  - src/contracts/abi/
+  - src/contracts/verification/
+
+Authors and Contributors:
+  - CLPIC Contributors
+
+Standards Compliance:
+  - Ethereum Yellow Paper (storage model)
+  - EIP-1014: Skinny CREATE2
+  - EIP-1153: Transient storage opcodes
+  - EIP-1167: Minimal Proxy Contract
+  - EIP-1967: Standard Proxy Storage Slots
+  - EIP-2535: Diamond Standard
+  - EIP-2929: Gas cost increases for state access
+  - EIP-3860: Limit and Meter Initcode
+  - ERC-1822: UUPS Proxy Standard
+  - Ethereum ABI Specification
+  - EIP-712: Typed structured data hashing
+  - EIP-838: Error handling with custom errors
+
+This software is provided under the BSD-3-Clause license.
+See LICENSE file for full license text.

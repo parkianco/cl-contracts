@@ -1,0 +1,70 @@
+# SBCL FASL files
+*.fasl
+*.fas
+*.lib
+*.x86f
+*.sparcf
+*.sparc64f
+*.hppa64f
+*.ppcf
+*.ppc64f
+*.lx86f
+*.lx86-64f
+*.abcl
+*.dx64fsl
+*.dx32fsl
+*.lx64fsl
+*.lx32fsl
+*.x86f
+*.dfsl
+*.pfsl
+*.d64fsl
+*.p64fsl
+*.bfasl
+*.wx64fsl
+*.wx32fsl
+
+# ASDF system index
+*.asd~
+.asdf-install.cache
+
+# Quicklisp local-projects
+quicklisp/
+.qlot/
+
+# Editor backups
+*~
+\#*\#
+.\#*
+*.swp
+*.swo
+
+# IDE/Editor specific
+.idea/
+.vscode/
+*.sublime-*
+.dir-locals.el
+
+# OS specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+build/
+dist/
+*.tar.gz
+*.zip
+
+# Test artifacts
+test/output/
+test/tmp/
+coverage/
+
+# Debug/log files
+*.log
+debug.lisp
+
+# REPL history
+.sbclrc-hist
+.slime-history.eld
