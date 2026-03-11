@@ -7,7 +7,7 @@
 ;;;; Pure Common Lisp - No external dependencies.
 ;;;; Requires SBCL for threading primitives (sb-thread).
 ;;;;
-;;;; Copyright (c) 2025 CLPIC Contributors
+;;;; Copyright (c) 2025 Parkian Company LLC
 ;;;; License: BSD-3-Clause
 
 (asdf:defsystem #:cl-contracts
