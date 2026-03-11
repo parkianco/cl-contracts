@@ -13,7 +13,7 @@
 (asdf:defsystem #:cl-contracts
   :name "cl-contracts"
   :version "1.0.0"
-  :author "CLPIC Contributors"
+  :author "Parkian Company LLC"
   :license "BSD-3-Clause"
   :description "Smart contract lifecycle management for Ethereum-compatible blockchains"
   :long-description "Comprehensive smart contract system providing:
