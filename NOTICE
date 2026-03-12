@@ -5,7 +5,6 @@ This software was originally developed as part of the CLPIC project
 (Common Lisp P2P Intellectual Property Chain) and has been extracted
 as a standalone library.
 
-Original source: https://github.com/clpic/clpic
 Extracted modules:
   - src/contracts/deployment/
   - src/contracts/storage/
