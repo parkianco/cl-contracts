@@ -117,3 +117,18 @@ BSD-3-Clause. See [LICENSE](LICENSE).
 
 ## Origin
 
+
+## Usage
+
+```lisp
+(asdf:load-system :SYSTEM-NAME)
+;; Use the functions from the library
+```
+
+## API
+
+See source code and docstrings for detailed API documentation.
+
+## License
+
+BSD-3-Clause License - see LICENSE file for details.
