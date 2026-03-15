@@ -17,7 +17,7 @@
   :name "cl-contracts"
   :version "0.1.0"
   :author "Parkian Company LLC"
-  :license "BSD-3-Clause"
+  :license "Apache-2.0"
   :description "Smart contract lifecycle management for Ethereum-compatible blockchains"
   :long-description "Comprehensive smart contract system providing:
   - Deployment (CREATE, CREATE2, factory patterns, proxies)

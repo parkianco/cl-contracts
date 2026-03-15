@@ -1,10 +1,10 @@
 ;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
-;; SPDX-License-Identifier: BSD-3-Clause
+;; SPDX-License-Identifier: Apache-2.0
 
 ;;;; cl-contracts/src/util/hash.lisp - Hash function utilities
 ;;;;
 ;;;; Copyright (c) 2025 CLPIC Contributors
-;;;; License: BSD-3-Clause
+;;;; License: Apache-2.0
 
 (in-package #:cl-contracts.util)
 

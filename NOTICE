@@ -28,5 +28,5 @@ Standards Compliance:
   - EIP-712: Typed structured data hashing
   - EIP-838: Error handling with custom errors
 
-This software is provided under the BSD-3-Clause license.
+This software is provided under the Apache-2.0 license.
 See LICENSE file for full license text.
