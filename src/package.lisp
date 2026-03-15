@@ -30,7 +30,9 @@
     Pure Common Lisp with no external dependencies.")
 
   (:export
-   ;; Module initialization
+   #:with-contracts-timing
+   #:contracts-batch-process
+   #:contracts-health-check;; Module initialization
    #:initialize-contracts-module
    #:shutdown-contracts-module
    #:module-version
@@ -82,7 +84,9 @@
     contracts, and gas estimation.")
 
   (:export
-   ;; Configuration
+   #:with-contracts-timing
+   #:contracts-batch-process
+   #:contracts-health-check;; Configuration
    #:*deployment-config*
    #:*default-gas-limit*
    #:*max-initcode-size*
@@ -168,7 +172,9 @@
     and snapshot management.")
 
   (:export
-   ;; Configuration
+   #:with-contracts-timing
+   #:contracts-batch-process
+   #:contracts-health-check;; Configuration
    #:*storage-word-size*
    #:*transient-storage-enabled*
    #:*access-tracking-enabled*
@@ -251,7 +257,9 @@
     event signatures, packed encoding, multicall, and error decoding.")
 
   (:export
-   ;; Configuration
+   #:with-contracts-timing
+   #:contracts-batch-process
+   #:contracts-health-check;; Configuration
    #:*abi-strict-mode*
    #:*abi-selector-cache*
 
@@ -341,7 +349,9 @@
     gas analysis, storage layout verification, and upgrade safety checks.")
 
   (:export
-   ;; Configuration
+   #:with-contracts-timing
+   #:contracts-batch-process
+   #:contracts-health-check;; Configuration
    #:*verification-config*
    #:*security-rules*
 
@@ -401,7 +411,9 @@
     utilities used throughout the system.")
 
   (:export
-   ;; Byte utilities
+   #:with-contracts-timing
+   #:contracts-batch-process
+   #:contracts-health-check;; Byte utilities
    #:bytes-to-hex
    #:hex-to-bytes
    #:concat-bytes

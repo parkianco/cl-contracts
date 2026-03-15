@@ -221,3 +221,38 @@
 (defun bytes-to-address (&rest args) "Auto-generated substantive API for bytes-to-address" (declare (ignore args)) t)
 (defun checksum-address (&rest args) "Auto-generated substantive API for checksum-address" (declare (ignore args)) t)
 (defun valid-address-p (&rest args) "Auto-generated substantive API for valid-address-p" (declare (ignore args)) t)
+
+
+;;; ============================================================================
+;;; Standard Toolkit for cl-contracts
+;;; ============================================================================
+
+(defmacro with-contracts-timing (&body body)
+  "Executes BODY and logs the execution time specific to cl-contracts."
+  (let ((start (gensym))
+        (end (gensym)))
+    `(let ((,start (get-internal-real-time)))
+       (multiple-value-prog1
+           (progn ,@body)
+         (let ((,end (get-internal-real-time)))
+           (format t "~&[cl-contracts] Execution time: ~A ms~%"
+                   (/ (* (- ,end ,start) 1000.0) internal-time-units-per-second)))))))
+
+(defun contracts-batch-process (items processor-fn)
+  "Applies PROCESSOR-FN to each item in ITEMS, handling errors resiliently.
+Returns (values processed-results error-alist)."
+  (let ((results nil)
+        (errors nil))
+    (dolist (item items)
+      (handler-case
+          (push (funcall processor-fn item) results)
+        (error (e)
+          (push (cons item e) errors))))
+    (values (nreverse results) (nreverse errors))))
+
+(defun contracts-health-check ()
+  "Performs a basic health check for the cl-contracts module."
+  (let ((ctx (initialize-contracts)))
+    (if (validate-contracts ctx)
+        :healthy
+        :degraded)))
