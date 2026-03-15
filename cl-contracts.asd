@@ -16,7 +16,7 @@
 (asdf:defsystem #:cl-contracts
   :name "cl-contracts"
   :version "0.1.0"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :description "Smart contract lifecycle management for Ethereum-compatible blockchains"
   :long-description "Comprehensive smart contract system providing:
@@ -34,18 +34,10 @@ Designed for SBCL, using sb-thread for concurrency primitives."
   :components
   ((:file "package")
    (:module "src"
-    :serial t
-    :components
-    (;; =====================================================
-     ;; Layer 0: Core Utilities
-     ;; =====================================================
-     (:module "util"
-      :serial t
-      :components
-      ((:file "bytes")
-       (:file "hex")
-       (:file "hash")
-       (:file "rlp")))))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-contracts" :depends-on ("package" "conditions" "types")))))))))
 
 (asdf:defsystem #:cl-contracts/test
   :description "Tests for cl-contracts"
