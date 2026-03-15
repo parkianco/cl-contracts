@@ -30,6 +30,7 @@
     Pure Common Lisp with no external dependencies.")
 
   (:export
+   #:memoize-function
    #:deep-copy-list
    #:group-by-count
    #:identity-list
@@ -90,6 +91,7 @@
     contracts, and gas estimation.")
 
   (:export
+   #:memoize-function
    #:deep-copy-list
    #:group-by-count
    #:identity-list
@@ -184,6 +186,7 @@
     and snapshot management.")
 
   (:export
+   #:memoize-function
    #:deep-copy-list
    #:group-by-count
    #:identity-list
@@ -275,6 +278,7 @@
     event signatures, packed encoding, multicall, and error decoding.")
 
   (:export
+   #:memoize-function
    #:deep-copy-list
    #:group-by-count
    #:identity-list
@@ -373,6 +377,7 @@
     gas analysis, storage layout verification, and upgrade safety checks.")
 
   (:export
+   #:memoize-function
    #:deep-copy-list
    #:group-by-count
    #:identity-list
@@ -441,6 +446,7 @@
     utilities used throughout the system.")
 
   (:export
+   #:memoize-function
    #:deep-copy-list
    #:group-by-count
    #:identity-list
