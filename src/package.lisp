@@ -30,7 +30,11 @@
     Pure Common Lisp with no external dependencies.")
 
   (:export
-   #:with-contracts-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-contracts-timing
    #:contracts-batch-process
    #:contracts-health-check;; Module initialization
    #:initialize-contracts-module
@@ -84,7 +88,11 @@
     contracts, and gas estimation.")
 
   (:export
-   #:with-contracts-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-contracts-timing
    #:contracts-batch-process
    #:contracts-health-check;; Configuration
    #:*deployment-config*
@@ -172,7 +180,11 @@
     and snapshot management.")
 
   (:export
-   #:with-contracts-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-contracts-timing
    #:contracts-batch-process
    #:contracts-health-check;; Configuration
    #:*storage-word-size*
@@ -257,7 +269,11 @@
     event signatures, packed encoding, multicall, and error decoding.")
 
   (:export
-   #:with-contracts-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-contracts-timing
    #:contracts-batch-process
    #:contracts-health-check;; Configuration
    #:*abi-strict-mode*
@@ -349,7 +365,11 @@
     gas analysis, storage layout verification, and upgrade safety checks.")
 
   (:export
-   #:with-contracts-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-contracts-timing
    #:contracts-batch-process
    #:contracts-health-check;; Configuration
    #:*verification-config*
@@ -411,7 +431,11 @@
     utilities used throughout the system.")
 
   (:export
-   #:with-contracts-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-contracts-timing
    #:contracts-batch-process
    #:contracts-health-check;; Byte utilities
    #:bytes-to-hex
