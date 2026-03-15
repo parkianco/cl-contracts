@@ -30,6 +30,8 @@
     Pure Common Lisp with no external dependencies.")
 
   (:export
+   #:deep-copy-list
+   #:group-by-count
    #:identity-list
    #:flatten
    #:map-keys
@@ -88,6 +90,8 @@
     contracts, and gas estimation.")
 
   (:export
+   #:deep-copy-list
+   #:group-by-count
    #:identity-list
    #:flatten
    #:map-keys
@@ -180,6 +184,8 @@
     and snapshot management.")
 
   (:export
+   #:deep-copy-list
+   #:group-by-count
    #:identity-list
    #:flatten
    #:map-keys
@@ -269,6 +275,8 @@
     event signatures, packed encoding, multicall, and error decoding.")
 
   (:export
+   #:deep-copy-list
+   #:group-by-count
    #:identity-list
    #:flatten
    #:map-keys
@@ -365,6 +373,8 @@
     gas analysis, storage layout verification, and upgrade safety checks.")
 
   (:export
+   #:deep-copy-list
+   #:group-by-count
    #:identity-list
    #:flatten
    #:map-keys
@@ -431,6 +441,8 @@
     utilities used throughout the system.")
 
   (:export
+   #:deep-copy-list
+   #:group-by-count
    #:identity-list
    #:flatten
    #:map-keys
